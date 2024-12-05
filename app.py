@@ -1,5 +1,13 @@
 import streamlit as st
-from knowledge_base import load_knowledge_base
+import json
+
+def load_knowledge_base():
+    try:
+        with open('doj_knowledge.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        st.error("Knowledge base file not found")
+        return {}
 
 def main():
     st.title("Department of Justice Virtual Assistant")
@@ -11,9 +19,8 @@ def main():
     query = st.text_input("How can I help you?")
     
     if query:
-        # Search in knowledge base
-        response = "I'm here to help with DOJ-related queries."
-        st.write(f"Bot: {response}")
+        st.write(f"You asked: {query}")
+        st.write("Bot: I'm here to help with DOJ-related queries.")
         
         # Feedback buttons
         col1, col2 = st.columns(2)
