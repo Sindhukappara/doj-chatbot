@@ -4,8 +4,9 @@ import json
 def load_knowledge_base():
     try:
         with open('doj_knowledge.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            return data.get('doj_knowledge', [])
+            lines = f.readlines()
+            data = [json.loads(line) for line in lines if line.strip()]
+        return data
     except FileNotFoundError:
         st.error("Knowledge base file (doj_knowledge.json) not found")
         return []
@@ -14,14 +15,10 @@ def load_knowledge_base():
         return []
 
 def find_response(query, knowledge_base):
-    # Convert query to lowercase for case-insensitive matching
     query_lower = query.lower()
-    
-    for entry in knowledge_base:
-        if 'questions' in entry:
-            for question in entry['questions']:
-                if query_lower in question['prompt'].lower():
-                    return question['completion']
+    for item in knowledge_base:
+        if 'prompt' in item and query_lower in item['prompt'].lower():
+            return item['completion']
     return "I'm here to help with DOJ-related queries. Please ask about divisions, services, or legal procedures."
 
 def main():
