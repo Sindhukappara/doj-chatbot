@@ -14,13 +14,13 @@ An interactive chatbot for the Department of Justice website using RAG (Retrieva
 ## Project Structure
 doj_chatbot/
 │── database/
-│ ├── db_setup.py
-│ └── db_viewer.py
+│   ├── db_setup.py
+│   └── db_viewer.py
 ├── models/
-│ ├── rag_model.py
-│ └── feedback_processor.py
+│   ├── rag_model.py
+│   └── feedback_processor.py
 ├── utils/
-│ └── helpers.py
+│   └── helpers.py
 ├── app.py
 └── requirements.txt
 
@@ -37,7 +37,8 @@ python database/db_setup.py
 streamlit run app.py
 Access the application at http://localhost:8501
 ```
-##Features
+**##Features**
+
 DOJ Information: Access information about various DOJ divisions
 Case Status: Check pendency of cases through NJDG
 Legal Services: Information about eFiling, ePay, and Tele Law Services
@@ -48,8 +49,12 @@ Create your feature branch (git checkout -b feature/AmazingFeature)
 Commit your changes (git commit -m 'Add some AmazingFeature')
 Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
-##License
+
+##**License**
+
 This project is licensed under the MIT License - see the LICENSE file for details.
-##Contact
+
+**##Contact**
+
 Your Name - sindhukappara@gmail.com
 Project Link: https://github.com/Sindhukappara/doj-chatbot
