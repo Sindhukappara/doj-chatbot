@@ -48,8 +48,8 @@ Create your feature branch (git checkout -b feature/AmazingFeature)
 Commit your changes (git commit -m 'Add some AmazingFeature')
 Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
-License
+##License
 This project is licensed under the MIT License - see the LICENSE file for details.
-Contact
+##Contact
 Your Name - sindhukappara@gmail.com
 Project Link: https://github.com/Sindhukappara/doj-chatbot
