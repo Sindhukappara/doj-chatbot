@@ -3,7 +3,7 @@ import json
 
 def load_knowledge_base():
     try:
-        with open('doj_knowledge.json', 'r', encoding='utf-8') as f:
+        with open('doj_knowledge.jsonl', 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         st.error("Knowledge base file not found")
