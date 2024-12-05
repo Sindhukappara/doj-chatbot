@@ -9,5 +9,5 @@ def load_knowledge_base():
                 st.session_state.knowledge_base = json.load(f)
         return st.session_state.knowledge_base
     except FileNotFoundError:
-        st.error("Knowledge base file (doj_knowledge.json) not found")
+        st.error("Knowledge base file (doj_knowledge.jsonl) not found")
         return {}
